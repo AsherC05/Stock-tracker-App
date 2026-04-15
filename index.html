@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Iconscout -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="./index.html" class="nav_logo">
+          <img src="./assets/ash-trader-no-name.png" alt="logo" />
+          <h1>Ash-Trader</h1>
+        </a>
+
+        <div class="theme-profile-container">
+          <div class="profile_container">
+            <a href="" class="profile">
+              <img src="./assets/IMG_1535.jpg" class="profile" />
+            </a>
+          </div>
+          <div class="drop-down-container" style="margin: 0 20px">
+            <i class="uil uil-bars" id="menu-items" style="font-size: 30px"></i>
+            <div class="drop-down" id="drop-down">
+              <ul>
+                <li>
+                  <a href="#watchlist"><i class="uil uil-eye"></i> Watchlist</a>
+                </li>
+                <li>
+                  <a href="#symbols"><i class="uil uil-usd-circle"></i> Symbols</a>
+                </li>
+                <li>
+                  <a href="#portfolio"><i class="uil uil-analytics"></i> Portfolio</a>
+                </li>
+                <li>
+                  <a href="#wallet"><i class="uil uil-wallet"></i> Wallet</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- watchList -->
+    <section id="watch-list">
+      <div class="search-container">
+        <div>
+          <i class="uil uil-search"></i>
+          <input
+            type="search"
+            class="search-input"
+            placeholder="search stocks"
+          />
+        </div>
+      </div>
+      <div class="search-modal" id="search-modal">
+        <div class="modal-content">
+          <div class="modal-header-container">
+            <div class="modal-header">
+              <div class="header-left">
+                <i class="uil uil-search" id="uil-search-2"></i>
+                <h3>Select a Stock</h3>
+              </div>
+              <i class="uil uil-times" id="close-modal"></i>
+            </div>
+            <div class="modal-subtitle-container">
+              <p class="modal-subtitle">
+                Multiple stocks match your search. Please select one:
+              </p>
+            </div>
+          </div>
+
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">AAPL</span>
+                <span class="company-name">Apple Inc.</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$270.77</span>
+                <span class="change negative">$-5.79 (-2.14%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">AMZN</span>
+                <span class="company-name">Amazon.com Inc.</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$3,395.00</span>
+                <span class="change positive">$+15.00 (+0.44%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">GOOGL</span>
+                <span class="company-name">Google LLC</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$2,750.00</span>
+                <span class="change positive">$+20.00 (+0.73%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">MSFT</span>
+                <span class="company-name">Microsoft Corporation</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$299.00</span>
+                <span class="change negative">$-2.00 (-0.67%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">META</span>
+                <span class="company-name">Meta Platforms Inc.</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$350.00</span>
+                <span class="change negative">$-5.00 (-1.41%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">NVDA</span>
+                <span class="company-name">NVIDIA Corporation</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$195.00</span>
+                <span class="change positive">$+10.00 (+5.41%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">BTC</span>
+                <span class="company-name">Bitcoin</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$30,000.00</span>
+                <span class="change negative">$-1,000.00 (-3.23%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">ETH</span>
+                <span class="company-name">Ethereum</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$2,000.00</span>
+                <span class="change positive">$+15.00 (+0.44%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">USDT</span>
+                <span class="company-name">Tether</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$1.00</span>
+                <span class="change positive">$+0.00 (+0.00%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">ADA</span>
+                <span class="company-name">Cardano</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$0.50</span>
+                <span class="change negative">$-2.00 (-0.67%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">SOL</span>
+                <span class="company-name" id="comp-name">Solana</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$25.00</span>
+                <span class="change negative">$-5.00 (-1.41%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+          <div class="stock-results-list">
+            <div class="stock-item">
+              <div class="stock-info">
+                <span class="ticker">XRP</span>
+                <span class="company-name">Ripple Labs Inc.</span>
+                <div class="tags">
+                  <span>Equity</span> <span>United States</span>
+                  <span>USD</span>
+                </div>
+              </div>
+              <div class="stock-price-info">
+                <span class="price">$0.75</span>
+                <span class="change positive">$+0.10 (+15.41%)</span>
+              </div>
+              <i class="uil uil-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="suggested-container">
+        <span class="suggestions-title">Suggested Stocks:</span>
+        <div class="stock-list" id="suggestions">
+          <a href="#">AAPL</a>
+          <a href="#">GOOGL</a>
+          <a href="#">MSFT</a>
+          <a href="#">TSLA</a>
+          <a href="#">AMZN</a>
+        </div>
+      </div>
+      <div id="quick-view">
+        <i class="uil uil-arrow-left" id="prev-btn"></i>
+        <i class="uil uil-arrow-right" id="next-btn"></i>
+        <div class="view-slider" id="view-slider">
+          <div class="company-view" id="apple-view">
+            <h2>Apple Inc.<i class="uil uil-star"></i></h2>
+            <a href="#symbols">AAPL</a>
+            <div class="price-container">
+              <div class="display-price">
+                <h1>$270.77</h1>
+                <h5>$-5.79 (-2.14%)</h5>
+              </div>
+              <div class="price-executions">
+                <div class="price">
+                  <h3>Open:</h3>
+                  <span class="open-number">$272.00</span>
+
+                  <h3>High:</h3>
+                  <span class="high-number">$275.50</span>
+                </div>
+                <div class="price">
+                  <h3>Low:</h3>
+                  <span class="low-number">$268.00</span>
+
+                  <h3>Volume:</h3>
+                  <span class="volume-number">52.1M</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="company-view" id="amazon-view">
+            <h2>Amazon.com Inc.<i class="uil uil-star"></i></h2>
+            <a href="#symbols">AMZN</a>
+            <div class="price-container">
+              <div class="display-price">
+                <h1>$3,395.00</h1>
+                <h5>$+15.00 (+0.44%)</h5>
+              </div>
+              <div class="price-executions">
+                <div class="price">
+                  <h3>Open:</h3>
+                  <span class="open-number">$3,390.00</span>
+
+                  <h3>High:</h3>
+                  <span class="high-number">$3,410.00</span>
+                </div>
+                <div class="price">
+                  <h3>Low:</h3>
+                  <span class="low-number">$3,380.00</span>
+
+                  <h3>Volume:</h3>
+                  <span class="volume-number">52.3M</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="company-view" id="google-view">
+            <h2>Google LLC<i class="uil uil-star"></i></h2>
+            <a href="#symbols">GOOGL</a>
+            <div class="price-container">
+              <div class="display-price">
+                <h1>$2,750.00</h1>
+                <h5>$+20.00 (+0.73%)</h5>
+              </div>
+              <div class="price-executions">
+                <div class="price">
+                  <h3>Open:</h3>
+                  <span class="open-number">$2,745.00</span>
+
+                  <h3>High:</h3>
+                  <span class="high-number">$2,760.00</span>
+                </div>
+                <div class="price">
+                  <h3>Low:</h3>
+                  <span class="low-number">$2,735.00</span>
+
+                  <h3>Volume:</h3>
+                  <span class="volume-number">45.2M</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="company-view" id="microsoft-view">
+            <h2>Microsoft Corporation<i class="uil uil-star"></i></h2>
+            <a href="#symbols">MSFT</a>
+            <div class="price-container">
+              <div class="display-price">
+                <h1>$299.00</h1>
+                <h5>$-2.00 (-0.67%)</h5>
+              </div>
+              <div class="price-executions">
+                <div class="price">
+                  <h3>Open:</h3>
+                  <span class="open-number">$301.00</span>
+
+                  <h3>High:</h3>
+                  <span class="high-number">$305.50</span>
+                </div>
+                <div class="price">
+                  <h3>Low:</h3>
+                  <span class="low-number">$298.00</span>
+
+                  <h3>Volume:</h3>
+                  <span class="volume-number">28.5M</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="company-view" id="meta-view">
+            <h2>Meta Platforms Inc.<i class="uil uil-star"></i></h2>
+            <a href="#symbols">META</a>
+            <div class="price-container">
+              <div class="display-price">
+                <h1>$350.00</h1>
+                <h5>$-5.00 (-1.41%)</h5>
+              </div>
+              <div class="price-executions">
+                <div class="price">
+                  <h3>Open:</h3>
+                  <span class="open-number">$355.00</span>
+
+                  <h3>High:</h3>
+                  <span class="high-number">$360.00</span>
+                </div>
+                <div class="price">
+                  <h3>Low:</h3>
+                  <span class="low-number">$345.00</span>
+
+                  <h3>Volume:</h3>
+                  <span class="volume-number">38.5M</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="company-view" id="nvidia-view">
+            <h2>NVIDIA Corporation<i class="uil uil-star"></i></h2>
+            <a href="#symbols">NVDA</a>
+            <div class="price-container">
+              <div class="display-price">
+                <h1>$195.00</h1>
+                <h5>$+10.00 (+5.41%)</h5>
+              </div>
+              <div class="price-executions">
+                <div class="price">
+                  <h3>Open:</h3>
+                  <span class="open-number">$185.00</span>
+
+                  <h3>High:</h3>
+                  <span class="high-number">$198.50</span>
+                </div>
+                <div class="price">
+                  <h3>Low:</h3>
+                  <span class="low-number">$184.00</span>
+
+                  <h3>Volume:</h3>
+                  <span class="volume-number">42.3M</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------- SYMBOL SECTION --------------------->
+
+    <section id="symbols">
+      <h1>Symbols</h1>
+
+      <div class="symbol-tabs">
+        <h2 id="show-stocks">Stocks <i class="uil-angle-right"></i></h2>
+        <h2 id="show-crypto">Cryptocurrency <i class="uil-angle-right"></i></h2>
+      </div>
+
+      <div class="select-tab" id="select-tab">
+        <span class="select-indicator" id="select-indicator"
+          >Select a category to view available symbols.
+        </span>
+      </div>
+
+      <div class="stocks-container" id="stocks-dropdown">
+        <div class="stock-results-list">
+          <div class="stock-item">
+            <span class="apple-icon"
+              ><img
+                src="./assets/apple-logo-white(dark-mode).png"
+                alt="Apple Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">AAPL</span>
+              <span class="company-name">Apple Inc.</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span> <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="stock-price-info">
+              <span class="price">$270.77</span>
+              <span class="change negative">$-5.79 (-2.14%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+        <div class="stock-results-list">
+          <div class="stock-item">
+            <span class="amzn-icon"
+              ><img
+                src="./assets/amazon-white(dark-mode).png"
+                alt="Amazon Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">AMZN</span>
+              <span class="company-name">Amazon.com Inc.</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span> <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="stock-price-info">
+              <span class="price">$3,395.00</span>
+              <span class="change positive">$+15.00 (+0.44%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+        <div class="stock-results-list">
+          <div class="stock-item">
+            <span class="icon"
+              ><img src="./assets/Google__G__logo.svg.webp" alt="Google Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">GOOGL</span>
+              <span class="company-name">Google LLC</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span> <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="stock-price-info">
+              <span class="price">$2,750.00</span>
+              <span class="change positive">$+20.00 (+0.73%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+        <div class="stock-results-list">
+          <div class="stock-item">
+            <span class="icon"
+              ><img src="./assets/Microsoft_icon.png" alt="Microsoft Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">MSFT</span>
+              <span class="company-name">Microsoft Corporation</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span> <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="stock-price-info">
+              <span class="price">$299.00</span>
+              <span class="change negative">$-2.00 (-0.67%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+        <div class="stock-results-list">
+          <div class="stock-item">
+            <span class="icon"
+              ><img src="./assets/Meta_Platforms_logo.svg.png" alt="Meta Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">META</span>
+              <span class="company-name">Meta Platforms Inc.</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span>
+                <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="stock-price-info">
+              <span class="price">$350.00</span>
+              <span class="change negative">$-5.00 (-1.41%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+        <div class="stock-results-list">
+          <div class="stock-item">
+            <span class="icon"
+              ><img src="./assets/NVDA-220e1e03.png" alt="NVIDIA Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">NVDA</span>
+              <span class="company-name">NVIDIA Corporation</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span> <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="stock-price-info">
+              <span class="price">$195.00</span>
+              <span class="change positive">$+10.00 (+5.41%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <!---------------------------- CRYPTO_LIST ---------------------------->
+
+      <div class="crypto-container" id="crypto-dropdown">
+        <div class="crypto-results-list">
+          <div class="stock-item">
+            <span class="apple-icon"
+              ><img src="./assets/Bitcoin.svg.webp" alt="Apple Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">BTC</span>
+              <span class="company-name">Bitcoin</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span> <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="stock-price-info">
+              <span class="price">$30,000.00</span>
+              <span class="change negative">$-1,000.00 (-3.23%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+        <div class="crypto-results-list">
+          <div class="stock-item">
+            <span class="amzn-icon"
+              ><img
+                src="./assets/ethereum-eth-logo(dark-mode).svg"
+                alt="Amazon Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">ETH</span>
+              <span class="company-name">Ethereum</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span> <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="stock-price-info">
+              <span class="price">$2,000.00</span>
+              <span class="change positive">$+15.00 (+0.44%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+        <div class="crypto-results-list">
+          <div class="stock-item">
+            <span class="icon"
+              ><img src="./assets/tether-usdt-logo.png" alt="Google Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">USDT</span>
+              <span class="company-name">Tether</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span> <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="stock-price-info">
+              <span class="price">$1.00</span>
+              <span class="change positive">$+0.00 (+0.00%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+        <div class="crypto-results-list">
+          <div class="stock-item">
+            <span class="icon"
+              ><img
+                src="./assets/(dark-lightmode)cardano-ada-logo.svg"
+                alt="Microsoft Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">ADA</span>
+              <span class="company-name">Cardano</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span> <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="crypto-price-info">
+              <span class="price">$0.50</span>
+              <span class="change negative">$-2.00 (-0.67%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+        <div class="crypto-results-list">
+          <div class="stock-item">
+            <span class="icon"
+              ><img src="./assets/solana-sol-logo.png" alt="Meta Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">SOL</span>
+              <span class="company-name">Solana</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span>
+                <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="crypto-price-info">
+              <span class="price">$25.00</span>
+              <span class="change negative">$-5.00 (-1.41%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+        <div class="crypto-results-list">
+          <div class="stock-item">
+            <span class="icon"
+              ><img
+                src="./assets/(dark-lightmode)xrp-xrp-logo.png"
+                alt="NVIDIA Icon"
+            /></span>
+            <div class="stock-info">
+              <span class="ticker">XRP</span>
+              <span class="company-name">Ripple Labs Inc.</span>
+              <div class="tags">
+                <span><h5>Equity</h5></span> <span><h5>United States</h5></span>
+                <span><h5>USD</h5></span>
+              </div>
+            </div>
+            <div class="stock-price-info">
+              <span class="price">$0.75</span>
+              <span class="change positive">$+0.10 (+15.41%)</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio">
+      <h1>Portfolio</h1>
+      <div id="portfolio-list"></div>
+    </section>
+
+    <!--------------------------- wallet section ----------------------------------->
+
+    <section id="wallet">
+      <h1>Wallet</h1>
+      <div id="nav-portfolio">
+        <div id="balance">
+          <h2>Balance: <span class="balance">0</span></h2>
+        </div>
+        <div id="stocks-owned">
+          <h2>Stocks Owned: <span class="stock-count">0</span></h2>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+      integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
