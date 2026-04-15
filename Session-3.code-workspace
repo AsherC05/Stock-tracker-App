@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    },
+    {
+      "path": "../../FS9-Week-007/Session-3/todo-app-v2-individual-version/project-start",
+    },
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Session-3",
+  },
+}
